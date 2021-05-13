@@ -44,6 +44,8 @@ const  MytitleMassage = ()=>(
             
                 <Typewriter
                 options={{
+                  strings: ['Mohammad Rahman.'],
+
                     strings: ['Front-end-WebDeveloper.'],
                     autoStart: true,
                     loop: true,
