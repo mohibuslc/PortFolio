@@ -6,12 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from "styled-components";
 import { theme } from "./Components/Theme/Theme";
+import { BrowserRouter } from 'react-router-dom';
 
 
 ReactDOM.render(
-  < ThemeProvider theme={theme}>
+  <BrowserRouter>
+  
      <App />
-    </ThemeProvider>,
+   
+    </BrowserRouter>,
+    
+ 
+
   document.getElementById('root')
 );
 

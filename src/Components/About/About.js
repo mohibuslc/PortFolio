@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "./About.css";
-import Profile from "../Asst/IMG_0678.JPG";
+import Profile from "../assets/IMG_0678.JPG";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
@@ -12,7 +12,7 @@ const About = () => {
         <div id="about">
             <div id="about">
       <div className="about">
-        <h1 className="pt-3 text-center font-details pb-3 design">ABOUT ME</h1>
+        <h1 className="pt-3 text-center about-section pb-3">About Me</h1>
         <Container>
           <Row className="pt-3 pb-5 align-items-center">
             <Col xs={12} md={6}>

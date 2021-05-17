@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Heavybit Welcomes New Member: Netlify | Heavybit</title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUGUVRUDBABU1ZUDwgFVw==",licenseKey:"cae249b533",applicationID:"17768921"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" rel="shortcut icon" href="https://www.heavybit.com/wp-content/themes/heavybit/favicon.ico" />
+
+    <!-- Remote CSS -->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400" />
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+
+    <!-- Local CSS -->
+    <link type="text/css" rel="stylesheet" href="https://www.heavybit.com/wp-content/themes/heavybit/assets/css/bootstrap.min.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="https://www.heavybit.com/wp-content/themes/heavybit/assets/css/font-awesome.min.css" media="screen" />    
+    <link type="text/css" rel="stylesheet" href="https://www.heavybit.com/wp-content/themes/heavybit/assets/css/jquery.jscrollpane.css" media="screen" />    
+    <link type="text/css" rel="stylesheet" href="https://www.heavybit.com/wp-content/themes/heavybit/style.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="https://www.heavybit.com/wp-content/themes/heavybit/style.mobile.css" media="screen" />
+
+    <!-- Remote JS -->
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var $j = jQuery.noConflict();
+    </script>
+
+    <!-- Segment -->
+    <script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+  analytics.load("oFmltdjyjwmrcdxgSNhe0HKmtIGkcthn");
+  analytics.page();
+  }}();
+    </script>
+
+    <!-- Local JS -->
+    <!--<script type="text/javascript" src="https://www.heavybit.com/wp-content/themes/heavybit/assets/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="https://www.heavybit.com/wp-content/themes/heavybit/assets/js/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript" src="https://www.heavybit.com/wp-content/themes/heavybit/assets/js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="https://www.heavybit.com/wp-content/themes/heavybit/assets/js/jquery.mousewheel.js"></script>    
+    <script type="text/javascript" src="https://www.heavybit.com/wp-content/themes/heavybit/assets/js/jquery.heavybit.js"></script>    
+
+    <script>var et_site_url='https://www.heavybit.com';var et_post_id='2658';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
+</script>
+	<!-- This site is optimized with the Yoast SEO Premium plugin v15.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="We’re thrilled to announce our newest Heavybit member, Netlify – a company that helps developers, editors, and designers manage and publish their content online." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://www.heavybit.com/library/blog/new-member-netlify/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Heavybit Welcomes New Member: Netlify | Heavybit" />
+	<meta property="og:description" content="We’re thrilled to announce our newest Heavybit member, Netlify – a company that helps developers, editors, and designers manage and publish their content online." />
+	<meta property="og:url" content="https://www.heavybit.com/library/blog/new-member-netlify/" />
+	<meta property="og:site_name" content="Heavybit" />
+	<meta property="article:publisher" content="https://www.facebook.com/heavybitindustries" />
+	<meta property="article:published_time" content="2016-05-18T21:30:30+00:00" />
+	<meta property="article:modified_time" content="2019-07-03T17:47:07+00:00" />
+	<meta property="og:image" content="https://www.heavybit.com/wp-content/uploads/2016/05/matt-biilmann-netlify-300x285.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@heavybit" />
+	<meta name="twitter:site" content="@heavybit" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Dana Oshiro">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="1 minute">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.heavybit.com/#website","url":"https://www.heavybit.com/","name":"Heavybit","description":"","potentialAction":[{"@type":"SearchAction","target":"https://www.heavybit.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.heavybit.com/library/blog/new-member-netlify/#primaryimage","inLanguage":"en-US","url":"https://www.heavybit.com/wp-content/uploads/2016/05/matt-biilmann-netlify.png","width":434,"height":412,"caption":"Matt Biilmann - Netlify"},{"@type":"WebPage","@id":"https://www.heavybit.com/library/blog/new-member-netlify/#webpage","url":"https://www.heavybit.com/library/blog/new-member-netlify/","name":"Heavybit Welcomes New Member: Netlify | Heavybit","isPartOf":{"@id":"https://www.heavybit.com/#website"},"primaryImageOfPage":{"@id":"https://www.heavybit.com/library/blog/new-member-netlify/#primaryimage"},"datePublished":"2016-05-18T21:30:30+00:00","dateModified":"2019-07-03T17:47:07+00:00","author":{"@id":"https://www.heavybit.com/#/schema/person/17c1aae26f9f3406a765dd0368e062b0"},"description":"We\u2019re thrilled to announce our newest Heavybit member, Netlify \u2013 a company that helps developers, editors, and designers manage and publish their content online.","breadcrumb":{"@id":"https://www.heavybit.com/library/blog/new-member-netlify/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.heavybit.com/library/blog/new-member-netlify/"]}]},{"@type":"BreadcrumbList","@id":"https://www.heavybit.com/library/blog/new-member-netlify/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.heavybit.com/","url":"https://www.heavybit.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.heavybit.com/library/blog/new-member-netlify/","url":"https://www.heavybit.com/library/blog/new-member-netlify/","name":"Heavybit Welcomes New Member: Netlify"}}]},{"@type":"Person","@id":"https://www.heavybit.com/#/schema/person/17c1aae26f9f3406a765dd0368e062b0","name":"Dana Oshiro","image":{"@type":"ImageObject","@id":"https://www.heavybit.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/ae3b5f7264cd634e82b86a5ddaa4d199?s=96&d=mm&r=g","caption":"Dana Oshiro"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.heavybit.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.heavybit.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.heavybit.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='et_monarch-css-css'  href='https://www.heavybit.com/wp-content/plugins/monarch/css/style.css?ver=1.4.13' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' type='text/css' media='all' />
+<link rel='stylesheet' id='single_person_css-css-css'  href='https://www.heavybit.com/wp-content/themes/heavybit/assets/css/single-person.css?ver=5.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='algolia-autocomplete-css'  href='https://www.heavybit.com/wp-content/plugins/search-by-algolia-instant-relevant-results/includes/../css/algolia-autocomplete.css?ver=2.11.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='dashicons-css'  href='https://www.heavybit.com/wp-includes/css/dashicons.min.css?ver=5.6.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.heavybit.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-includes/js/underscore.min.js?ver=1.8.3' id='underscore-js'></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-includes/js/wp-util.min.js?ver=5.6.2' id='wp-util-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/search-by-algolia-instant-relevant-results/includes/../js/algoliasearch/algoliasearch.jquery.min.js?ver=2.11.1' id='algolia-search-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/search-by-algolia-instant-relevant-results/includes/../js/autocomplete.js/autocomplete.min.js?ver=2.11.1' id='algolia-autocomplete-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/search-by-algolia-instant-relevant-results/includes/../js/autocomplete-noconflict.js?ver=2.11.1' id='algolia-autocomplete-noconflict-js'></script>
+<link rel="https://api.w.org/" href="https://www.heavybit.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.heavybit.com/wp-json/wp/v2/posts/2658" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.heavybit.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.heavybit.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6.2" />
+<link rel='shortlink' href='https://www.heavybit.com/?p=2658' />
+<link rel="alternate" type="application/json+oembed" href="https://www.heavybit.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.heavybit.com%2Flibrary%2Fblog%2Fnew-member-netlify%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.heavybit.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.heavybit.com%2Flibrary%2Fblog%2Fnew-member-netlify%2F&#038;format=xml" />
+<script type="text/javascript"><!--
+function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','toolbar=0,status=0,resizable=1,width=460,height=320');	return false;}
+//-->
+</script>
+<!-- WordPress Most Popular --><script type="text/javascript">/* <![CDATA[ */ jQuery.post("https://www.heavybit.com/wp-admin/admin-ajax.php", { action: "wmp_update", id: 2658, token: "a75afffdef" }); /* ]]> */</script><!-- /WordPress Most Popular --><style type="text/css" id="et-bloom-custom-css">
+					.et_bloom .et_bloom_optin_2 .et_bloom_form_content { background-color: #424242 !important; } .et_bloom .et_bloom_optin_2 .et_bloom_form_container .et_bloom_form_header { background-color: #363636 !important; } .et_bloom .et_bloom_optin_2 .wedge_edge .triangle { fill: #363636} .et_bloom .et_bloom_optin_2 .et_bloom_form_content button { background-color: #faa435 !important; } .et_bloom .et_bloom_optin_2 .et_bloom_form_content .et_bloom_fields i { color: #faa435 !important; } .et_bloom .et_bloom_optin_2 .et_bloom_form_content .et_bloom_custom_field_radio i:before { background: #faa435 !important; } .et_bloom .et_bloom_optin_2 .et_bloom_form_content button { background-color: #faa435 !important; } .et_bloom .et_bloom_optin_2 .et_bloom_form_container h2, .et_bloom .et_bloom_optin_2 .et_bloom_form_container h2 span, .et_bloom .et_bloom_optin_2 .et_bloom_form_container h2 strong { font-family: "Source Sans Pro", Helvetica, Arial, Lucida, sans-serif; }.et_bloom .et_bloom_optin_2 .et_bloom_form_container p, .et_bloom .et_bloom_optin_2 .et_bloom_form_container p span, .et_bloom .et_bloom_optin_2 .et_bloom_form_container p strong, .et_bloom .et_bloom_optin_2 .et_bloom_form_container form input, .et_bloom .et_bloom_optin_2 .et_bloom_form_container form button span { font-family: "Source Sans Pro", Helvetica, Arial, Lucida, sans-serif; } 
+				</style><link rel="preload" href="https://www.heavybit.com/wp-content/plugins/divi-builder/core/admin/fonts/modules.ttf" as="font" crossorigin="anonymous"><style type="text/css" id="et-social-custom-css">
+				 
+			</style><script type="text/javascript">var algolia = {"debug":false,"application_id":"0QCKBC1FMK","search_api_key":"7733fdd199ec7af7ee2923ec39c3f036","powered_by_enabled":true,"query":"","autocomplete":{"sources":[{"index_id":"searchable_posts","index_name":"hb_searchable_posts","label":"All posts","admin_name":"All posts","position":10,"max_suggestions":5,"tmpl_suggestion":"autocomplete-post-suggestion","enabled":true}],"input_selector":"input[name='s']:not('.no-autocomplete')"},"indices":{"searchable_posts":{"name":"hb_searchable_posts","id":"searchable_posts","enabled":true,"replicas":[]}}};</script><script type="text/html" id="tmpl-autocomplete-header">
+	<div class="autocomplete-header">
+		<div class="autocomplete-header-title">{{{ data.label }}}</div>
+		<div class="clear"></div>
+	</div>
+</script>
+
+<script type="text/html" id="tmpl-autocomplete-post-suggestion">
+	<a class="suggestion-link" href="{{ data.permalink }}" title="{{ data.post_title }}">
+		<# if ( data.images.thumbnail ) { #>
+			<img class="suggestion-post-thumbnail" src="{{ data.images.thumbnail.url }}" alt="{{ data.post_title }}">
+			<# } #>
+				<div class="suggestion-post-attributes">
+					<span class="suggestion-post-title">{{{ data._highlightResult.post_title.value }}}</span>
+					<# if ( data._snippetResult['content'] ) { #>
+						<span class="suggestion-post-content">{{{ data._snippetResult['content'].value }}}</span>
+						<# } #>
+				</div>
+	</a>
+</script>
+
+<script type="text/html" id="tmpl-autocomplete-term-suggestion">
+	<a class="suggestion-link" href="{{ data.permalink }}" title="{{ data.name }}">
+		<svg viewBox="0 0 21 21" width="21" height="21">
+			<svg width="21" height="21" viewBox="0 0 21 21">
+				<path
+					d="M4.662 8.72l-1.23 1.23c-.682.682-.68 1.792.004 2.477l5.135 5.135c.7.693 1.8.688 2.48.005l1.23-1.23 5.35-5.346c.31-.31.54-.92.51-1.36l-.32-4.29c-.09-1.09-1.05-2.06-2.15-2.14l-4.3-.33c-.43-.03-1.05.2-1.36.51l-.79.8-2.27 2.28-2.28 2.27zm9.826-.98c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25z"
+					fill-rule="evenodd"></path>
+			</svg>
+		</svg>
+		<span class="suggestion-post-title">{{{ data._highlightResult.name.value }}}</span>
+	</a>
+</script>
+
+<script type="text/html" id="tmpl-autocomplete-user-suggestion">
+	<a class="suggestion-link user-suggestion-link" href="{{ data.posts_url }}" title="{{ data.display_name }}">
+		<# if ( data.avatar_url ) { #>
+			<img class="suggestion-user-thumbnail" src="{{ data.avatar_url }}" alt="{{ data.display_name }}">
+			<# } #>
+
+				<span class="suggestion-post-title">{{{ data._highlightResult.display_name.value }}}</span>
+	</a>
+</script>
+
+<script type="text/html" id="tmpl-autocomplete-footer">
+    <div class="autocomplete-footer">
+        <div class="autocomplete-footer-branding">
+			Powered by            <a href="#" class="algolia-powered-by-link" title="Algolia">
+                <img class="algolia-logo" src="https://www.algolia.com/assets/algolia128x40.png" alt="Algolia" />
+            </a>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="tmpl-autocomplete-empty">
+	<div class="autocomplete-empty">
+		No results matched your query 		<span class="empty-query">"{{ data.query }}"</span>
+	</div>
+</script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        var contains = function(needle) {
+            // Per spec, the way to identify NaN is that it is not equal to itself
+            var findNaN = needle !== needle;
+            var indexOf;
+
+            if(!findNaN && typeof Array.prototype.indexOf === 'function') {
+                indexOf = Array.prototype.indexOf;
+            } else {
+                indexOf = function(needle) {
+                    var i = -1, index = -1;
+
+                    for(i = 0; i < this.length; i++) {
+                        var item = this[i];
+
+                        if((findNaN && item !== item) || item === needle) {
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    return index;
+                };
+            }
+
+            return indexOf.call(this, needle) > -1;
+        };
+
+		/* init Algolia client */
+        var client = algoliasearch(algolia.application_id, algolia.search_api_key);
+
+		/* setup default sources */
+        var sources = [];
+        jQuery.each(algolia.autocomplete.sources, function (i, config) {
+            var suggestion_template = wp.template(config['tmpl_suggestion']);
+            sources.push({
+                source: algoliaAutocomplete.sources.hits(client.initIndex(config['index_name']), {
+                    hitsPerPage: config['max_suggestions'],
+                    attributesToSnippet: [
+                        'content:10'
+                    ],
+                    highlightPreTag: '__ais-highlight__',
+                    highlightPostTag: '__/ais-highlight__'
+                }),
+                templates: {
+                    header: function () {
+                        return wp.template('autocomplete-header')({
+                            label: _.escape(config['label'])
+                        });
+                    },
+                    suggestion: function (hit) {
+                        for (var key in hit._highlightResult) {
+							/* We do not deal with arrays. */
+                            if (typeof hit._highlightResult[key].value !== 'string') {
+                                continue;
+                            }
+                            hit._highlightResult[key].value = _.escape(hit._highlightResult[key].value);
+                            hit._highlightResult[key].value = hit._highlightResult[key].value.replace(/__ais-highlight__/g, '<em>').replace(/__\/ais-highlight__/g, '</em>');
+                        }
+
+                        for (var key in hit._snippetResult) {
+							/* We do not deal with arrays. */
+                            if (typeof hit._snippetResult[key].value !== 'string') {
+                                continue;
+                            }
+
+                            hit._snippetResult[key].value = _.escape(hit._snippetResult[key].value);
+                            hit._snippetResult[key].value = hit._snippetResult[key].value.replace(/__ais-highlight__/g, '<em>').replace(/__\/ais-highlight__/g, '</em>');
+                        }
+
+                        console.log(hit);
+
+                        if (!contains.call(hit.taxonomies.category, 'Events')) {
+                            return suggestion_template(hit);
+                        } else {
+                            console.log('That was an event');
+                        }
+                    }
+                }
+            });
+
+        });
+
+		/* Setup dropdown menus */
+        jQuery(algolia.autocomplete.input_selector).each(function (i) {
+            var $searchInput = jQuery(this);
+
+            var config = {
+                debug: algolia.debug,
+                hint: false,
+                openOnFocus: true,
+                appendTo: 'body',
+                templates: {
+                    empty: wp.template('autocomplete-empty')
+                }
+            };
+
+            if (algolia.powered_by_enabled) {
+                config.templates.footer = wp.template('autocomplete-footer');
+            }
+
+			/* Instantiate autocomplete.js */
+            var autocomplete = algoliaAutocomplete($searchInput[0], config, sources)
+                .on('autocomplete:selected', function (e, suggestion) {
+					/* Redirect the user when we detect a suggestion selection. */
+                    window.location.href = suggestion.permalink;
+                });
+
+			/* Force the dropdown to be re-drawn on scroll to handle fixed containers. */
+            jQuery(window).scroll(function() {
+                if(autocomplete.autocomplete.getWrapper().style.display === "block") {
+                    autocomplete.autocomplete.close();
+                    autocomplete.autocomplete.open();
+                }
+            });
+        });
+
+        jQuery(document).on("click", ".algolia-powered-by-link", function (e) {
+            e.preventDefault();
+            window.location = "https://www.algolia.com/?utm_source=WordPress&utm_medium=extension&utm_content=" + window.location.hostname + "&utm_campaign=poweredby";
+        });
+    });
+</script>
+            <meta property="og:image" content="https://www.heavybit.com/wp-content/uploads/2016/05/netlify-featured.jpg" />
+       
+</head>
+<body class="post-template-default single single-post postid-2658 single-format-standard et_divi_builder et_bloom et_monarch et-pb-theme-heavybit theme et-db et_minified_js et_minified_css">
+    	<header class="header">
+        <div class="container">
+    		<div class="logo">
+                <a href="https://www.heavybit.com/">
+                    <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/heavybit-logo.png" alt="" width="255" class="desktop-logo" />
+                    <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/heavybit-vert-logo.png" alt="" height="45" class="mobile-logo" />
+                </a>
+            </div>
+            <div class="nav">
+                <div class="main-nav"><ul id="menu-main-nav" class="menu"><li id="menu-item-2418" class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2418"><a href="https://www.heavybit.com/accelerator/">accelerator <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-2419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2419"><a href="https://www.heavybit.com/accelerator/">about</a></li>
+	<li id="menu-item-2420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2420"><a href="https://www.heavybit.com/people/">team</a></li>
+	<li id="menu-item-10719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10719"><a href="https://www.heavybit.com/people/">advisors</a></li>
+	<li id="menu-item-10720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10720"><a href="https://www.heavybit.com/accelerator/faq/">faq</a></li>
+	<li id="menu-item-3765" class="apply-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-3765"><a href="https://heavybit.typeform.com/to/tP7Lh7">apply</a></li>
+</ul>
+</li>
+<li id="menu-item-10773" class="top-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10773"><a href="https://www.heavybit.com/accelerator/faq/#fund">funding  <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-10774" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10774"><a href="https://www.heavybit.com/accelerator/faq/#fund">faq</a></li>
+</ul>
+</li>
+<li id="menu-item-10716" class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10716"><a href="https://www.heavybit.com/portfolio/">companies <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-10717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10717"><a href="https://www.heavybit.com/portfolio/">portfolio</a></li>
+	<li id="menu-item-10718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10718"><a href="https://www.heavybit.com/member-spotlights/">spotlights</a></li>
+</ul>
+</li>
+<li id="menu-item-2424" class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2424"><a href="https://www.heavybit.com/library/">library <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-2426" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2426"><a href="https://www.heavybit.com/library/">videos</a></li>
+	<li id="menu-item-2428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2428"><a href="https://www.heavybit.com/library/podcasts/">podcasts</a></li>
+	<li id="menu-item-2427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2427"><a href="https://www.heavybit.com/library/blog/">blog</a></li>
+	<li id="menu-item-10714" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10714"><a href="https://www.heavybit.com/search/?t=heavybit&#038;s=">search</a></li>
+</ul>
+</li>
+<li id="menu-item-2429" class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2429"><a href="https://www.heavybit.com/events/">events <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li id="menu-item-10715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10715"><a href="https://heavybit.typeform.com/to/o2fjMn">subscribe</a></li>
+	<li id="menu-item-2430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2430"><a href="https://www.heavybit.com/events/">calendar</a></li>
+	<li id="menu-item-6142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6142"><a href="https://www.heavybit.com/devguild/">devguild</a></li>
+	<li id="menu-item-7114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7114"><a href="https://www.heavybit.com/wheelhouse/">wheelhouse</a></li>
+</ul>
+</li>
+</ul></div>            </div>
+            <nav class="navbar hidden-md hidden-lg hidden-sm">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="mnav">
+                        <div class="mobile-nav"><ul id="menu-main-nav-1" class="menu"><li class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2418"><a href="https://www.heavybit.com/accelerator/">accelerator <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2419"><a href="https://www.heavybit.com/accelerator/">about</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2420"><a href="https://www.heavybit.com/people/">team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10719"><a href="https://www.heavybit.com/people/">advisors</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10720"><a href="https://www.heavybit.com/accelerator/faq/">faq</a></li>
+	<li class="apply-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-3765"><a href="https://heavybit.typeform.com/to/tP7Lh7">apply</a></li>
+</ul>
+</li>
+<li class="top-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10773"><a href="https://www.heavybit.com/accelerator/faq/#fund">funding  <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10774"><a href="https://www.heavybit.com/accelerator/faq/#fund">faq</a></li>
+</ul>
+</li>
+<li class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10716"><a href="https://www.heavybit.com/portfolio/">companies <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10717"><a href="https://www.heavybit.com/portfolio/">portfolio</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10718"><a href="https://www.heavybit.com/member-spotlights/">spotlights</a></li>
+</ul>
+</li>
+<li class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2424"><a href="https://www.heavybit.com/library/">library <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2426"><a href="https://www.heavybit.com/library/">videos</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2428"><a href="https://www.heavybit.com/library/podcasts/">podcasts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2427"><a href="https://www.heavybit.com/library/blog/">blog</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10714"><a href="https://www.heavybit.com/search/?t=heavybit&#038;s=">search</a></li>
+</ul>
+</li>
+<li class="top-nav menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2429"><a href="https://www.heavybit.com/events/">events <i class="fa fa-caret-down"></i></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10715"><a href="https://heavybit.typeform.com/to/o2fjMn">subscribe</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2430"><a href="https://www.heavybit.com/events/">calendar</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6142"><a href="https://www.heavybit.com/devguild/">devguild</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7114"><a href="https://www.heavybit.com/wheelhouse/">wheelhouse</a></li>
+</ul>
+</li>
+</ul></div>                    </div>
+                </div>
+            </nav>
+        </div>
+	</header>
+    		<div id="gaIdentifier" class="post-template-default single single-post postid-2658 single-format-standard blog news library et_divi_builder et_bloom et_monarch et-pb-theme-heavybit theme et-db et_minified_js et_minified_css" style="display:none;"></div>
+        
+        	<section class="body">
+        <div class="container">
+            <div class="body-inner">
+                <section class="headline headline-library">
+                    <h1>
+                        <a href="https://www.heavybit.com/library">Library</a>
+                        <span></span>
+                        <a href="https://www.heavybit.com/library/blog">Blog</a>
+                    </h1>
+                </section>
+                
+                <section class="section blog">
+                    <div class="row">
+                        <div class="col-xs-9 pull-right content-col">
+                        	<div class="content">
+                        		                                                                <p>
+                                    <img src="https://www.heavybit.com/wp-content/uploads/2016/05/netlify-content.jpg" alt="" width="100%" />
+                                </p>
+                                                                <div class="blog-entry-date-2">
+                                    <strong class="text-uppercase">
+                                        May 18, 2016                                    </strong>
+                                                                        <div class="blog-entry-tags">
+                                        <ul>
+                                                                                        <li class='tag-button'>
+                                                <i class='fa fa-tags'></i>
+                                                <a href="https://www.heavybit.com/library/topic/member">
+                                                    member                                                </a>                                        
+                                            </li>
+                                                                                    </ul>
+                                    </div>
+                                    <br /><br />
+                                                                    </div>
+                                <h1>
+                                    Heavybit Welcomes New Member: Netlify                                    <span class="autori">
+									
+																				<a href="https://www.heavybit.com/people/dana-oshiro">
+											Dana Oshiro										</a>
+									</span>
+                                </h1>
+                                <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>We&rsquo;re thrilled to announce our newest Heavybit member, Netlify &ndash; a company that helps developers, editors, and designers manage and publish their content online.</p>
+<p>The emergence of Git centered workflows with modern build tools, static site generators and modern browsers have dramatically changed how most front-end coders work. Netlify unifies these new tools and processes into a viable workflow in order to offer a highly performant and easily maintainable site or web-app.</p>
+<p>We are excited to work alongside Netlify as they take modern static websites and apps mainstream. Please join us in welcoming Matt &amp; Chris to the community! <a href="https://www.netlify.com" target="_blank">Click here for more on Netlify</a>.</p>
+<h2>About The Founders</h2>
+<p><img loading="lazy" class="img-responsive alignleft wp-image-2660 size-medium" style="float: left; margin-right: 20px;" src="https://www.heavybit.com/wp-content/uploads/2016/05/matt-biilmann-netlify-300x285.png" alt="Matt Biilmann - Netlify" width="300" height="285" srcset="https://www.heavybit.com/wp-content/uploads/2016/05/matt-biilmann-netlify-300x285.png 300w, https://www.heavybit.com/wp-content/uploads/2016/05/matt-biilmann-netlify.png 434w" sizes="(max-width: 300px) 100vw, 300px"></p>
+<p>Matt Biilmann, CEO and co-founder of Netlify | <a href="https://www.linkedin.com/in/mathias-biilmann-christensen-a5a3805" target="_blank">LinkedIn</a> | <a href="https://twitter.com/biilmann" target="_blank">Twitter</a></p>
+<p>Matt Biilmann is co-founder and CEO of Netlify. Developer by trade, Matt likes code, listen to music and drink beer. A former CTO in a 150 people web-tech company, and creator of the dynamic CMS WebPop, he moved to SF 4 years ago with no intention of leaving again.</p>
+<p>&nbsp;<br>
+&nbsp;</p>
+<p><img loading="lazy" class="img-responsive alignleft wp-image-2659 size-medium" style="float: left; margin-right: 20px;" src="https://www.heavybit.com/wp-content/uploads/2016/05/chris-bach-netlify-300x276.png" alt="Chris Bach - Netlify" width="300" height="276" srcset="https://www.heavybit.com/wp-content/uploads/2016/05/chris-bach-netlify-300x276.png 300w, https://www.heavybit.com/wp-content/uploads/2016/05/chris-bach-netlify.png 430w" sizes="(max-width: 300px) 100vw, 300px"></p>
+<p>Chris Bach, President and co-founder of Netlify | <a href="https://www.linkedin.com/in/christianbachdk" target="_blank">LinkedIn</a> | <a href="https://twitter.com/Chr_Bach" target="_blank">Twitter</a></p>
+<p>Chris Bach is co-founder and President of Netlify. He spent 14 years in advertising, founding and selling one agency, and serving as a Chief Design Officer in another. He enjoys innovative digital advertising, building things, peanut butter, champagne and movies.</p>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cae249b533","applicationID":"17768921","transactionName":"NFcENkpQChVRUkJfDg0dJwFMWAsIH0JfWAYPVw==","queueTime":0,"applicationTime":849,"atts":"GBAHQAJKGRs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>
+<span class="et_bloom_bottom_trigger"></span>                                                            </div>
+                        </div>
+                        <div class="col-xs-3 pull-left sidebar-col">
+                                                        <div class="sidebar">
+                                <div class="search-cont">
+    <i class="fa fa-search"></i>
+    <form method="get" id="searchform" action="https://www.heavybit.com/search/">
+        <input type="hidden" name="t" id="t" value="heavybit" />
+        <input type="text" name="s" id="s" value="" 
+            placeholder="Search the Library" class="search-text-field" />
+    </form>
+</div> 
+                                <div class="newsletter-cont">
+    <h4 class="text-right">
+        Want access<br />
+        to updates?<br />
+        <span>Sign Up Now</span>
+    </h4>
+    <form action="https://heavybit.typeform.com/to/o2fjMn" method="GET" target="_blank">
+        <ul class="newsllter-form">
+            <li>
+                <input type="text" name="email" id="email" value="" placeholder="Enter your email" class="newsletter-text-field" />
+            </li>
+            <li>
+                <input type="submit" name="" value="&gt;" class="newsletter-button" />
+            </li>
+        </ul>
+    </form>
+</div> 
+                                <div class="sidebar-box">
+                                    <div class="sidebar-box-headline">
+                                        <span>Most Popular</span>
+                                    </div>                                    
+                                    <div class="sidebar-box-content">
+                                        <ul>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/messaging-framework/" class="clearfix">                                       
+                                                                                                                                                        <img src="https://www.heavybit.com/wp-content/uploads/2019/05/dear-founders-start-with-messaging-300x113.jpg" alt="" height="45" />
+                                                                                                        <h5 class="item-padding-left">
+                                                        <span>
+                                                            Dana Oshiro                                                        </span> 
+                                                        Dear Founders: Start with Messaging                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/customer-case-study-template/" class="clearfix">                                       
+                                                                                                                                                        <img src="https://www.heavybit.com/wp-content/uploads/2020/02/case-study-framework-main-300x113.jpg" alt="" height="45" />
+                                                                                                        <h5 class="item-padding-left">
+                                                        <span>
+                                                            Ashley Dotterweich                                                        </span> 
+                                                        How to Craft Your First Customer Case Study                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/revitalizing-your-developer-content-playbook-w-githubs-brian-douglas/" class="clearfix">                                       
+                                                                                                                                                        <img src="https://www.heavybit.com/wp-content/uploads/2021/04/brian-douglas-developer-content-300x113.jpg" alt="" height="45" />
+                                                                                                        <h5 class="item-padding-left">
+                                                        <span>
+                                                            Heavybit                                                        </span> 
+                                                        Revitalizing Your Developer Content Playbook w/ GitHub’s Brian Douglas                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/saas-poc-paid-pilot-program/" class="clearfix">                                       
+                                                                                                                                                        <img src="https://www.heavybit.com/wp-content/uploads/2020/02/saas-poc-paid-pilot-300x113.jpg" alt="" height="45" />
+                                                                                                        <h5 class="item-padding-left">
+                                                        <span>
+                                                            Ashley Dotterweich                                                        </span> 
+                                                        How to Execute SaaS POCs that Convert                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                                <div class="sidebar-box">
+                                    <div class="sidebar-box-headline">
+                                        <a href="https://www.heavybit.com/library/blog/news">News</a>
+                                    </div>
+                                    <div class="sidebar-box-content">
+                                        <ul>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/heavybit-welcomes-new-member-crunchy-data/" class="clearfix">                                       
+                                                                                                    <img src="https://www.heavybit.com/wp-content/uploads/2021/04/new-member-crunchy-data-featured-300x113.jpg" alt="" height="45" />
+                                                    <h5 class="item-padding-left">
+                                                        <span>
+                                                            April 27, 2021                                                        </span>                                                     
+                                                        Heavybit Welcomes New Member: Crunchy Data                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/heavybit-welcomes-new-member-jeli/" class="clearfix">                                       
+                                                                                                    <img src="https://www.heavybit.com/wp-content/uploads/2020/12/new-member-jeli-featured-300x113.jpg" alt="" height="45" />
+                                                    <h5 class="item-padding-left">
+                                                        <span>
+                                                            December 7, 2020                                                        </span>                                                     
+                                                        Heavybit Welcomes New Member: Jeli                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/heavybit-welcomes-new-member-shipyard/" class="clearfix">                                       
+                                                                                                    <img src="https://www.heavybit.com/wp-content/uploads/2020/11/new-member-shipyard-featured-300x113.jpg" alt="" height="45" />
+                                                    <h5 class="item-padding-left">
+                                                        <span>
+                                                            November 30, 2020                                                        </span>                                                     
+                                                        Heavybit Welcomes New Member: Shipyard                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                        <li>
+                                                                                                <a href="https://www.heavybit.com/library/blog/covid-resources-devtools-startups/" class="clearfix">                                       
+                                                                                                    <img src="https://www.heavybit.com/wp-content/uploads/2020/05/covid-resources-devtools-startups-300x113.jpg" alt="" height="45" />
+                                                    <h5 class="item-padding-left">
+                                                        <span>
+                                                            May 12, 2020                                                        </span>                                                     
+                                                        COVID Resources for DevTools Startups                                                        
+                                                    </h5>
+                                                </a>
+                                            </li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                                <div class="sidebar-box">
+                                    <div class="sidebar-box-headline">
+                                        <a href="https://devcojobs.com">Jobs</a>
+                                    </div>
+                                    <div class="sidebar-box-content sidebar-box-upcoming-content">
+                                        <script type='text/javascript'>
+    var embeddable_job_widget_options = {
+        'script_url' : 'https://www.devcojobs.com/?embed=wp_job_manager_widget',
+        'keywords'   : '',
+        'location'   : '',
+        'categories' : '',
+        'job_types'  : '',
+        'per_page'   : '4',
+        'pagination' : '0'
+    };
+</script>
+<script type='text/javascript' src='https://www.devcojobs.com/wp-content/plugins/wp-job-manager-embeddable-job-widget/assets/js/embed.js'></script>
+<div id="embeddable-job-widget">
+    <div id="embeddable-job-widget-content"></div>
+</div>   
+                                    </div>
+                                </div>
+                            </div>                        </div>
+                    </div>
+                </section>
+                
+                    
+    
+        
+    <div style="display:none;" id="gaIdentifier" class="post-template-default single single-post postid-2658 single-format-standard blog news library et_divi_builder et_bloom et_monarch et-pb-theme-heavybit theme et-db et_minified_js et_minified_css"></div>
+
+
+
+
+
+
+                <section class="section related">
+                    <h5 id="related">More From The Library</h5>
+                    <div class="row">
+                                                <div class="col-xs-4">
+                                                        <div class="heavybit-entry heavybit-entry-learn" style="background: #464445 url(https://www.heavybit.com/wp-content/uploads/2016/08/dev-tools-digest-sep-5.jpg) no-repeat top left; background-size: auto 199px;">
+                                                                                            <a href="https://www.heavybit.com/library/blog/dev-tools-digest-sep-5/" class="clearfix">                                       
+                                                                                                        <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/news-icon.png" alt="" class="secondary-icon" />
+                                                                        <div class="heavybit-entry-img">
+                                        <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/placeholder.png" alt="" class="img-responsive placeholder" />
+                                    </div>
+                                    <div class="heavybit-entry-content">                                    
+                                        <p class="heavybit-date text-uppercase">
+                                            September 6, 2016                                        </p>
+                                        <h3>
+                                            Dev Tools Digest &#8211; Sep. 5                                        </h3>
+                                        <p>
+                                            This week in our Dev Tools Digest, Mux secures 2.8M in seed funding, Takipi changes company name to OverOps, Netlify introduces Deploy Conte...                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                                                <div class="col-xs-4">
+                                                                                                <div class="heavybit-entry heavybit-entry-learn" style="background: #464445 url(https://www.heavybit.com/wp-content/uploads/2016/04/road-to-growth-wide-artwork.jpg) no-repeat top center; background-size: auto 199px;">
+                                 
+                                                                                            <a href="https://www.heavybit.com/library/podcasts/road-to-growth/ep-4-guerrilla-marketing/" class="clearfix">                                       
+                                                                                                        <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/audio-icon.png" alt="" class="secondary-icon" />
+                                                                        <div class="heavybit-entry-img">
+                                        <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/placeholder.png" alt="" class="img-responsive placeholder" />
+                                    </div>
+                                    <div class="heavybit-entry-content">                                    
+                                        <p class="heavybit-date text-uppercase">
+                                            December 22, 2015                                        </p>
+                                        <h3>
+                                            Ep. #4, Guerrilla Marketing                                        </h3>
+                                        <p>
+                                            On this episode of Road To Growth, Yaron talks with Kyle Wild, CEO of Keen IO, about the power of guerrilla marketing in building a strong c...                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                                                <div class="col-xs-4">
+                                                        <div class="heavybit-entry heavybit-entry-learn" style="background: #464445 url(https://www.heavybit.com/wp-content/uploads/2016/04/doug-leone-evolution-of-sales-2015.jpg) no-repeat top left; background-size: auto 199px;">
+                                                                                            <a href="https://www.heavybit.com/library/video/evolution-of-sales-2015/" class="clearfix">                                       
+                                                                                                        <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/video-icon.png" alt="" class="secondary-icon" />
+                                                                        <div class="heavybit-entry-img">
+                                        <img src="https://www.heavybit.com/wp-content/themes/heavybit/assets/img/placeholder.png" alt="" class="img-responsive placeholder" />
+                                    </div>
+                                    <div class="heavybit-entry-content">                                    
+                                        <p class="heavybit-date text-uppercase">
+                                            October 21, 2015                                        </p>
+                                        <h3>
+                                            Evolution of Sales 2015                                        </h3>
+                                        <p>
+                                            In this Heavybit Speaker Series, Doug Leone, Sequoia Capital's Managing Partner, shares some of the common patterns he's seen in successful ...                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                                                    
+                    </div>
+                </section>            </div>
+        </div>
+    </section>
+        <footer class="footer">
+        <div class="container">
+            <div class="foot-nav clearfix">
+                <div class="menu-footer-about-container"><ul id="menu-footer-about" class="menu"><li id="menu-item-1558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1558"><a href="https://www.heavybit.com/accelerator/">accelerator</a></li>
+<li id="menu-item-3766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3766"><a href="https://heavybit.typeform.com/to/tP7Lh7">apply</a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1559"><a href="https://www.heavybit.com/portfolio/">portfolio</a></li>
+<li id="menu-item-1557" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1557"><a href="https://www.heavybit.com/people/">people</a></li>
+<li id="menu-item-1556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1556"><a href="https://www.heavybit.com/contact/">contact</a></li>
+</ul></div>                <div class="menu-footer-library-container"><ul id="menu-footer-library" class="menu"><li id="menu-item-1561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1561"><a href="https://www.heavybit.com/library/">library</a></li>
+<li id="menu-item-1564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1564"><a href="https://www.heavybit.com/library/">speaker series</a></li>
+<li id="menu-item-1562" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1562"><a href="https://www.heavybit.com/library/podcasts/">podcasts</a></li>
+<li id="menu-item-2463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2463"><a href="https://www.heavybit.com/library/blog/">blog</a></li>
+<li id="menu-item-8944" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8944"><a href="https://www.heavybit.com/library/contributor-program/">contribute</a></li>
+</ul></div>                <div class="menu-footer-events-container"><ul id="menu-footer-events" class="menu"><li id="menu-item-1565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"><a href="https://www.heavybit.com/events/">events</a></li>
+<li id="menu-item-1566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1566"><a href="https://www.heavybit.com/events/">calendar</a></li>
+<li id="menu-item-6301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6301"><a href="https://www.heavybit.com/devguild/">devguild</a></li>
+<li id="menu-item-7115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7115"><a href="https://www.heavybit.com/wheelhouse/">wheelhouse</a></li>
+</ul></div>                <div class="pull-right"><ul id="menu-footer-connect" class="menu"><li id="menu-item-2433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2433"><a href="#">connect</a></li>
+<li id="menu-item-2434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2434"><a href="https://twitter.com/heavybit">twitter</a></li>
+<li id="menu-item-2435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2435"><a href="https://www.facebook.com/heavybitindustries">facebook</a></li>
+<li id="menu-item-5091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5091"><a href="https://www.heavybit.com/subscribe/">subscribe</a></li>
+</ul></div>            </div>      
+        </div>
+    </footer>
+    <div class="scroll-top"><a href="#"><i class="fa fa-angle-up"></i></a></div>
+    <div class="et_bloom_popup et_bloom_optin et_bloom_resize et_bloom_optin_2 et_bloom_auto_popup" data-delay="60" data-cookie_duration="3">
+							<div class="et_bloom_form_container et_bloom_popup_container et_bloom_form_bottom with_edge wedge_edge et_bloom_rounded et_bloom_form_text_dark et_bloom_animation_fadein">
+								
+			<div class="et_bloom_form_container_wrapper clearfix">
+				<div class="et_bloom_header_outer">
+					<div class="et_bloom_form_header split et_bloom_header_text_light">
+						<img width="610" height="309" src="https://www.heavybit.com/wp-content/uploads/2017/05/heavybit-industries-610x309.png" class="et_bloom_hide_mobile et_bloom_image_no_animation et_bloom_image" alt="" loading="lazy" srcset="https://www.heavybit.com/wp-content/uploads/2017/05/heavybit-industries-610x309.png 610w, https://www.heavybit.com/wp-content/uploads/2017/05/heavybit-industries-300x152.png 300w, https://www.heavybit.com/wp-content/uploads/2017/05/heavybit-industries-768x389.png 768w, https://www.heavybit.com/wp-content/uploads/2017/05/heavybit-industries.png 800w" sizes="(max-width: 610px) 100vw, 610px" />
+						<div class="et_bloom_form_text">
+						<h2>Want developer focused content in your inbox?</h2><p>Join our mailing list to receive the latest Library updates. After subscribing, tell us your preferences to receive only the email you want.</p>
+					</div>
+						
+					</div>
+				</div>
+				<div class="et_bloom_form_content et_bloom_1_field et_bloom_bottom_inline">
+					
+					<svg class="triangle et_bloom_default_edge" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="20" viewBox="0 0 100 100" preserveAspectRatio="none">
+						<path d="M0 0 L50 100 L100 0 Z" fill=""></path>
+					</svg>
+					<form method="post" class="clearfix">
+						<div class="et_bloom_fields">
+							
+							<p class="et_bloom_popup_input et_bloom_subscribe_email">
+								<input placeholder="Email">
+							</p>
+							
+							<button data-optin_id="optin_2" data-service="mailchimp" data-list_id="b18835a955" data-page_id="1140" data-account="Heavybit" data-ip_address="false" class="et_bloom_submit_subscription">
+								<span class="et_bloom_subscribe_loader"></span>
+								<span class="et_bloom_button_text et_bloom_button_text_color_light">SUBSCRIBE!</span>
+							</button>
+						</div>
+					</form>
+					<div class="et_bloom_success_container">
+						<span class="et_bloom_success_checkmark"></span>
+					</div>
+					<h2 class="et_bloom_success_message">Thanks for subscribing, check your inbox to confirm and choose preferences!</h2>
+					
+				</div>
+			</div>
+			<span class="et_bloom_close_button"></span>
+							</div>
+						</div><div class="et_social_flyin et_social_resize et_social_flyin_bottom_left et_social_slideright et_social_auto_popup et_social_mobile_on" data-delay="300">
+					<a href="#" class="et_social_icon et_social_icon_cancel"></a>
+					<div class="et_social_header">
+						<h3>You&#039;ve been here a while...</h3>
+						<p>Are you learning something? Share it with your friends!</p>
+					</div>
+					<div class="et_social_networks et_social_autowidth et_social_darken et_social_rounded et_social_left et_social_withnetworknames">
+						
+						<ul class="et_social_icons_container"><li class="et_social_twitter">
+									<a href="https://twitter.com/share?text=Heavybit%20Welcomes%20New%20Member%3A%20Netlify&#038;url=https%3A%2F%2Fwww.heavybit.com%2Flibrary%2Fblog%2Fnew-member-netlify%2F&#038;via=heavybit" class="et_social_share" rel="nofollow" data-social_name="twitter" data-post_id="2658" data-social_type="share" data-location="flyin">
+										<i class="et_social_icon et_social_icon_twitter"></i><div class="et_social_network_label"><div class="et_social_networkname">Twitter</div></div><span class="et_social_overlay"></span>
+									</a>
+								</li><li class="et_social_reddit">
+									<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.heavybit.com%2Flibrary%2Fblog%2Fnew-member-netlify%2F&#038;title=Heavybit%20Welcomes%20New%20Member%3A%20Netlify" class="et_social_share" rel="nofollow" data-social_name="reddit" data-post_id="2658" data-social_type="share" data-location="flyin">
+										<i class="et_social_icon et_social_icon_reddit"></i><div class="et_social_network_label"><div class="et_social_networkname">reddit</div></div><span class="et_social_overlay"></span>
+									</a>
+								</li><li class="et_social_hackernews">
+									<a href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fwww.heavybit.com%2Flibrary%2Fblog%2Fnew-member-netlify%2F&#038;t=Heavybit%20Welcomes%20New%20Member%3A%20Netlify" class="et_social_share" rel="nofollow" data-social_name="hackernews" data-post_id="2658" data-social_type="share" data-location="flyin">
+										<i class="et_social_icon et_social_icon_hackernews"></i><div class="et_social_network_label"><div class="et_social_networkname">Hacker News</div></div><span class="et_social_overlay"></span>
+									</a>
+								</li><li class="et_social_facebook">
+									<a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.heavybit.com%2Flibrary%2Fblog%2Fnew-member-netlify%2F&#038;t=Heavybit%20Welcomes%20New%20Member%3A%20Netlify" class="et_social_share" rel="nofollow" data-social_name="facebook" data-post_id="2658" data-social_type="share" data-location="flyin">
+										<i class="et_social_icon et_social_icon_facebook"></i><div class="et_social_network_label"><div class="et_social_networkname">Facebook</div></div><span class="et_social_overlay"></span>
+									</a>
+								</li></ul>
+					</div>
+				</div><link rel='stylesheet' id='et-gf-source-sans-pro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='et_bloom-css-css'  href='https://www.heavybit.com/wp-content/plugins/bloom/css/style.css?ver=1.3.11' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/monarch/js/idle-timer.min.js?ver=1.4.13' id='et_monarch-idle-js'></script>
+<script type='text/javascript' id='et_monarch-custom-js-js-extra'>
+/* <![CDATA[ */
+var monarchSettings = {"ajaxurl":"https:\/\/www.heavybit.com\/wp-admin\/admin-ajax.php","pageurl":"https:\/\/www.heavybit.com\/library\/blog\/new-member-netlify\/","stats_nonce":"2529645c10","share_counts":"046616498b","follow_counts":"c6ea22459f","total_counts":"4c95aaec7a","media_single":"f555d2c6ed","media_total":"cc3c27fd9c","generate_all_window_nonce":"d3bdffd70b","no_img_message":"No images available for sharing on this page"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/monarch/js/custom.js?ver=1.4.13' id='et_monarch-custom-js-js'></script>
+<script type='text/javascript' id='divi-builder-custom-script-js-extra'>
+/* <![CDATA[ */
+var et_pb_custom = {"ajaxurl":"https:\/\/www.heavybit.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.heavybit.com\/wp-content\/themes\/heavybit\/images","builder_images_uri":"https:\/\/www.heavybit.com\/wp-content\/plugins\/divi-builder\/includes\/builder\/images","et_frontend_nonce":"6d9f78628b","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"475ceed5c0","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"2658","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":false,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_box_shadow_elements = [];
+var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
+var et_pb_sticky_elements = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/divi-builder/js/divi-builder.min.js?ver=4.9.1' id='divi-builder-custom-script-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/divi-builder/core/admin/js/common.js?ver=4.9.1' id='et-core-common-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-includes/js/wp-embed.min.js?ver=5.6.2' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/bloom/js/jquery.uniform.min.js?ver=1.3.11' id='et_bloom-uniform-js-js'></script>
+<script type='text/javascript' id='et_bloom-custom-js-js-extra'>
+/* <![CDATA[ */
+var bloomSettings = {"ajaxurl":"https:\/\/www.heavybit.com\/wp-admin\/admin-ajax.php","pageurl":"https:\/\/www.heavybit.com\/library\/video\/evolution-of-sales-2015\/","stats_nonce":"52f409da1a","subscribe_nonce":"0e4313a1f5","is_user_logged_in":"not_logged"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/bloom/js/custom.js?ver=1.3.11' id='et_bloom-custom-js-js'></script>
+<script type='text/javascript' src='https://www.heavybit.com/wp-content/plugins/bloom/js/idle-timer.min.js?ver=1.3.11' id='et_bloom-idle-timer-js-js'></script>
+        
+</body>
+</html>      

@@ -5,21 +5,34 @@
       import { Parallax } from "react-parallax";
       import Container from "react-bootstrap/Container";
       import Mynevbar from '../src/Components/Navbar/Mynevbar';
-      import MyCarasol from '../src/Components/Carasol/MyCarasol';
-      import MyMassage from '../src/Components/Tital-Massage/MyMassage';
-      import About from '../src/Components/About/About';
+      import Hero from "../src/Components/Hero/Hero.js";
+      import {  Route, Switch } from 'react-router-dom';
+     
 
-      function App() {
-        return (
-         <div  >
-        <Mynevbar />
-        <MyCarasol/>
-        <MyMassage />
+           
+     
+      import About from '../src/Components/About/About';
+      import Skills from "../src/Components/Skills/Skills.js";
+     
+
+      function App() {   //  Need to = install Parallax  / install reveal ;
         
-          <div>
+        return (
+       
+         <div  >
+           <switch>
+             
+           </switch>
+        <Mynevbar />
+        <Hero />
+       
+       
+        
+        
+          <div> 
           <Parallax
           blur={{ min: -30, max: 30 }}
-          bgImage={require("./Components/Asst/img/parallax/background.webp")}
+          bgImage={require("./Components/assets/img/parallax/background.webp")}
           bgImageAlt=""
           strength={-200}
         >
@@ -30,10 +43,15 @@
       </Container> 
 
      </Parallax>
-       </div>
       
+         
+          <Skills />
+      
+      </div>
      
     </div>
+     
+     
   );
 };
 
